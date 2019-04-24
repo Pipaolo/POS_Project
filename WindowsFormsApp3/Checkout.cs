@@ -15,10 +15,12 @@ namespace WindowsFormsApp3
     public partial class Checkout : MetroForm
     {
         List<string> priceList = new List<string>();
+        List<string> foodNameList = new List<string>();
 
-        public Checkout(List<string> priceList)
+        public Checkout(List<string> priceList, List<string> foodNameList)
         {
             this.priceList = priceList;
+            this.foodNameList = foodNameList;
             InitializeComponent();
         }
 
@@ -26,12 +28,17 @@ namespace WindowsFormsApp3
         {
             metroLabel5.Text = DateTime.Now.ToLongTimeString();
             metroLabel6.Text = DateTime.Now.ToLongDateString();
+        }
 
-            txtPrice1.Text = priceList[0];
-            txtPrice1.Text = priceList[1];
-            txtPrice1.Text = priceList[2];
+        private void generateReceipt()
+        {
+            string receipt = "";
 
-
+            for (int i = 0; i < foodNameList.Count(); i++)
+            {
+                receipt = $"1     {foodNameList[i]}      {priceList[i]}";
+                txtCheckout.Text += receipt;
+            }
         }
     }
 }
