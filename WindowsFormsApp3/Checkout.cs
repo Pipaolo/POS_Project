@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
 {
@@ -16,11 +17,16 @@ namespace WindowsFormsApp3
     {
         List<string> priceList = new List<string>();
         List<string> foodNameList = new List<string>();
+        List<int> quantityList = new List<int>();
 
-        public Checkout(List<string> priceList, List<string> foodNameList)
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlCommand cmd;
+
+        public Checkout(List<string> priceList, List<string> foodNameList, List<int> quantityList)
         {
             this.priceList = priceList;
             this.foodNameList = foodNameList;
+            this.quantityList = quantityList;
             InitializeComponent();
         }
 
@@ -28,17 +34,64 @@ namespace WindowsFormsApp3
         {
             metroLabel5.Text = DateTime.Now.ToLongTimeString();
             metroLabel6.Text = DateTime.Now.ToLongDateString();
+            clearData();
+            generateReceipt();
+        }
+
+        private void clearData()
+        {
+  
+            connection.Open();
+            cmd = new SqlCommand("delete from [checkoutTable]",connection);
+
+            int result = cmd.ExecuteNonQuery();
+
+            if (result == 1)
+            {
+                System.Diagnostics.Debug.WriteLine("Delete Complete!");
+            }
+
+            connection.Close();
         }
 
         private void generateReceipt()
         {
-            string receipt = "";
-
-            for (int i = 0; i < foodNameList.Count(); i++)
+            if(connection.State == ConnectionState.Closed)
             {
-                receipt = $"1     {foodNameList[i]}      {priceList[i]}";
-                txtCheckout.Text += receipt;
+                connection.Open();
             }
+
+            for (int i = 0; i < foodNameList.Count; i++)
+            {
+                cmd = new SqlCommand("insert into [checkoutTable] values (@quantity, @foodName, @foodPrice)", connection);
+                cmd.Parameters.AddWithValue("@quantity", quantityList[i]);
+                cmd.Parameters.AddWithValue("@foodName", foodNameList[i]);
+                cmd.Parameters.AddWithValue("@foodPrice", priceList[i]);
+                int result = cmd.ExecuteNonQuery();
+
+                if(result == 1)
+                {
+                    System.Diagnostics.Debug.WriteLine("Insert Complete!");
+                }
+            }
+
+
+            displayReceipt();
+        }
+
+        private void displayReceipt()
+        {
+            cmd = new SqlCommand("select * from [checkoutTable]", connection);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            DataTable dta = new DataTable();
+
+            sda.Fill(dta);
+
+            gCheckoutTable.ReadOnly = true;
+            gCheckoutTable.DataSource = dta;
+
+            connection.Close();
         }
     }
 }

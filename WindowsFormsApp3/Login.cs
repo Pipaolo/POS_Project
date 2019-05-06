@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
 {
     public partial class Login : MetroForm
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ciit\Documents\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Login()
         {
@@ -59,36 +59,52 @@ namespace WindowsFormsApp3
         private void loginUser()
         {
             bool usernameExists = false;
-            try
+
+            if(txtUsername.Text == "admin" && txtPassword.Text == "pipao")
             {
-                connection.Open();
-                Console.WriteLine("Connected Successfully!");
-
-                SqlCommand cmd = new SqlCommand($"select * from [credentialsTable] where username = '{txtUsername.Text}' and password = '{txtPassword.Text}'", connection);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while(reader.Read())
+                AdminMenu adminMenu = new AdminMenu();
+                try
                 {
-                    if (txtUsername.Text.Equals(reader[0].ToString()) && txtPassword.Text.Equals(reader[1].ToString()))
+                    Hide();
+                    adminMenu.ShowDialog();
+                    Show();
+                }
+                catch (Exception) { }
+
+            }
+            else
+            {
+                try
+                {
+                    connection.Open();
+                    Console.WriteLine("Connected Successfully!");
+
+                    SqlCommand cmd = new SqlCommand($"select * from [credentialsTable] where username = '{txtUsername.Text}' and password = '{txtPassword.Text}'", connection);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        MessageBox.Show("Login Success!");
-                        launchMainMenu();
-                        usernameExists = true;
+                        if (txtUsername.Text.Equals(reader[0].ToString()) && txtPassword.Text.Equals(reader[1].ToString()))
+                        {
+                            MessageBox.Show("Login Success!");
+                            launchMainMenu();
+                            usernameExists = true;
+                        }
                     }
-                }
 
-                if(!usernameExists)
+                    if (!usernameExists)
+                    {
+                        MessageBox.Show("Invalid username/password!");
+                    }
+
+                    connection.Close();
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid username/password!");
+                    Console.WriteLine(ex.Message);
                 }
-
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            }     
         }
 
         private void launchMainMenu()

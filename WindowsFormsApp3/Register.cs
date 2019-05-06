@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
 {
     public partial class Register : MetroForm
     {
-        SqlConnection connection = new SqlConnection (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ciit\Documents\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Register()
         {
@@ -40,8 +40,8 @@ namespace WindowsFormsApp3
 
         private void conPass_isFocused(object sender, EventArgs e)
         {
-            txtConPass.Text = string.Empty;
-            txtConPass.UseSystemPasswordChar = true;
+            txtConfirmPass.Text = string.Empty;
+            txtConfirmPass.UseSystemPasswordChar = true;
             if (txtUsername.Text.Equals(String.Empty))
             {
                 txtUsername.Text = "Username";
@@ -54,11 +54,7 @@ namespace WindowsFormsApp3
 
         }
     
-        private void Form3_Load(object sender, EventArgs e)
-        {
-       
-        }
-
+   
         private void btnRegister_Click(object sender, EventArgs e)
         {
             try

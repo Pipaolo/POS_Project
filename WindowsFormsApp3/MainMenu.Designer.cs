@@ -153,7 +153,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "MainMenu";
-            this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSpecialMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegularMenu)).EndInit();

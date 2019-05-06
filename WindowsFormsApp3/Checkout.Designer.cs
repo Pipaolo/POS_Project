@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -45,7 +48,8 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.txtCheckout = new MetroFramework.Controls.MetroTextBox();
+            this.gCheckoutTable = new MetroFramework.Controls.MetroGrid();
+            ((System.ComponentModel.ISupportInitialize)(this.gCheckoutTable)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -224,45 +228,55 @@
             this.metroLabel16.TabIndex = 16;
             this.metroLabel16.Text = "SHOW RECIEPT BEFORE CLAIMING";
             // 
-            // txtCheckout
+            // gCheckoutTable
             // 
-            // 
-            // 
-            // 
-            this.txtCheckout.CustomButton.Image = null;
-            this.txtCheckout.CustomButton.Location = new System.Drawing.Point(168, 2);
-            this.txtCheckout.CustomButton.Name = "";
-            this.txtCheckout.CustomButton.Size = new System.Drawing.Size(125, 125);
-            this.txtCheckout.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCheckout.CustomButton.TabIndex = 1;
-            this.txtCheckout.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCheckout.CustomButton.UseSelectable = true;
-            this.txtCheckout.CustomButton.Visible = false;
-            this.txtCheckout.Lines = new string[] {
-        "Price"};
-            this.txtCheckout.Location = new System.Drawing.Point(23, 308);
-            this.txtCheckout.MaxLength = 32767;
-            this.txtCheckout.Multiline = true;
-            this.txtCheckout.Name = "txtCheckout";
-            this.txtCheckout.PasswordChar = '\0';
-            this.txtCheckout.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCheckout.SelectedText = "";
-            this.txtCheckout.SelectionLength = 0;
-            this.txtCheckout.SelectionStart = 0;
-            this.txtCheckout.ShortcutsEnabled = true;
-            this.txtCheckout.Size = new System.Drawing.Size(296, 130);
-            this.txtCheckout.TabIndex = 18;
-            this.txtCheckout.Text = "Price";
-            this.txtCheckout.UseSelectable = true;
-            this.txtCheckout.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCheckout.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.gCheckoutTable.AllowUserToResizeRows = false;
+            this.gCheckoutTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gCheckoutTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gCheckoutTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gCheckoutTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gCheckoutTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gCheckoutTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gCheckoutTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gCheckoutTable.EnableHeadersVisualStyles = false;
+            this.gCheckoutTable.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gCheckoutTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gCheckoutTable.Location = new System.Drawing.Point(24, 301);
+            this.gCheckoutTable.Name = "gCheckoutTable";
+            this.gCheckoutTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gCheckoutTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gCheckoutTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gCheckoutTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gCheckoutTable.Size = new System.Drawing.Size(314, 137);
+            this.gCheckoutTable.TabIndex = 17;
             // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 598);
-            this.Controls.Add(this.txtCheckout);
+            this.Controls.Add(this.gCheckoutTable);
             this.Controls.Add(this.metroLabel16);
             this.Controls.Add(this.metroLabel15);
             this.Controls.Add(this.metroLabel14);
@@ -283,6 +297,7 @@
             this.Name = "Checkout";
             this.Text = "Checkout";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gCheckoutTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +322,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroTextBox txtCheckout;
+        private MetroFramework.Controls.MetroGrid gCheckoutTable;
     }
 }
