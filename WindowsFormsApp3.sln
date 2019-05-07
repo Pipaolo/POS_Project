@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{B1EBC0F9-8762-45E9-A3ED-70D18FA270CB}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "POS_System", "POS_System\POS_System.vdproj", "{62EB2A20-1CAB-441E-8E7A-E79A4B2E2C9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,18 @@ Global
 		{B1EBC0F9-8762-45E9-A3ED-70D18FA270CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1EBC0F9-8762-45E9-A3ED-70D18FA270CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1EBC0F9-8762-45E9-A3ED-70D18FA270CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62EB2A20-1CAB-441E-8E7A-E79A4B2E2C9D}.Debug|Any CPU.ActiveCfg = Debug
+		{62EB2A20-1CAB-441E-8E7A-E79A4B2E2C9D}.Debug|Any CPU.Build.0 = Debug
+		{62EB2A20-1CAB-441E-8E7A-E79A4B2E2C9D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5948166E-C7A0-419D-882D-B97554BF9DE2}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal

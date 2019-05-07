@@ -52,7 +52,6 @@ C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsA
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Login.resources
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.MainMenu.resources
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Register.resources
-C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Admin.resources
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Menu.resources
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form6.resources
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources

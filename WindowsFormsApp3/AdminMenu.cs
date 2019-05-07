@@ -171,5 +171,47 @@ namespace WindowsFormsApp3
             }
             this.Close();
         }
+
+        private void gAdminTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string temp = string.Empty;
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+
+            foreach (DataGridViewRow row in gAdminTable.SelectedRows)
+            {
+                temp = Convert.ToString(gAdminTable[1, row.Index].Value);
+            }
+
+            DialogResult dialogResult = MessageBox.Show($"Are you sure you want to delete {temp}?", "Delete Item", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+            
+                foreach (DataGridViewRow row in gAdminTable.SelectedRows)
+                {
+                    gAdminTable.Rows.RemoveAt(row.Index);
+                }
+
+                cmd = new SqlCommand($"delete from [foodTable] where foodName = '{temp}'", connection);
+
+                int result = cmd.ExecuteNonQuery();
+
+                if (result == 1)
+                {
+                    System.Diagnostics.Debug.WriteLine("Delete Complete!");
+                }
+
+                gAdminTable.Refresh();
+                connection.Close();
+            }
+            else
+            {
+
+            }
+        }
     }
 }
