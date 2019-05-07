@@ -64,9 +64,12 @@ namespace WindowsFormsApp3
 
             DataTable dta = new DataTable();
 
-            foreach (var item in priceList)
+            for (int i = 0; i < foodNameList.Count; i++)
             {
-                totalPrice += Convert.ToInt32(item.Replace("PHP", ""));
+                for (int j = 0; j < quantityList[i]; j++)
+                {
+                    totalPrice += Convert.ToInt32(priceList[i].Replace("PHP", ""));
+                }
             }
 
             totalPrice += (totalPrice * (decimal).12);
