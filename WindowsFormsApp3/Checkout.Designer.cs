@@ -41,13 +41,10 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.lblTotalPrice = new MetroFramework.Controls.MetroLabel();
+            this.lblVat = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.txtPayment = new MetroFramework.Controls.MetroTextBox();
             this.gCheckoutTable = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.gCheckoutTable)).BeginInit();
             this.SuspendLayout();
@@ -142,23 +139,23 @@
             this.metroLabel10.TabIndex = 9;
             this.metroLabel10.Text = "Price";
             // 
-            // metroLabel11
+            // lblTotalPrice
             // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(23, 441);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(60, 19);
-            this.metroLabel11.TabIndex = 10;
-            this.metroLabel11.Text = "Subtotal:";
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Location = new System.Drawing.Point(21, 464);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(60, 19);
+            this.lblTotalPrice.TabIndex = 10;
+            this.lblTotalPrice.Text = "Subtotal:";
             // 
-            // metroLabel12
+            // lblVat
             // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(23, 460);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(30, 19);
-            this.metroLabel12.TabIndex = 11;
-            this.metroLabel12.Text = "Tax:";
+            this.lblVat.AutoSize = true;
+            this.lblVat.Location = new System.Drawing.Point(24, 441);
+            this.lblVat.Name = "lblVat";
+            this.lblVat.Size = new System.Drawing.Size(60, 19);
+            this.lblVat.TabIndex = 11;
+            this.lblVat.Text = "VAT: 12%";
             // 
             // metroLabel13
             // 
@@ -169,64 +166,40 @@
             this.metroLabel13.TabIndex = 12;
             this.metroLabel13.Text = "Tender:";
             // 
-            // metroTextBox1
+            // txtPayment
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(131, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
+            this.txtPayment.CustomButton.Image = null;
+            this.txtPayment.CustomButton.Location = new System.Drawing.Point(125, 2);
+            this.txtPayment.CustomButton.Name = "";
+            this.txtPayment.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.txtPayment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPayment.CustomButton.TabIndex = 1;
+            this.txtPayment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPayment.CustomButton.UseSelectable = true;
+            this.txtPayment.CustomButton.Visible = false;
+            this.txtPayment.Lines = new string[] {
         "ENTER PAYMENT (eg. 500)"};
-            this.metroTextBox1.Location = new System.Drawing.Point(76, 486);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(153, 24);
-            this.metroTextBox1.TabIndex = 13;
-            this.metroTextBox1.Text = "ENTER PAYMENT (eg. 500)";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(146, 523);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel14.TabIndex = 14;
-            this.metroLabel14.Text = "THANK YOU";
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(146, 542);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(77, 19);
-            this.metroLabel15.TabIndex = 15;
-            this.metroLabel15.Text = "APPROVED";
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(76, 561);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(220, 19);
-            this.metroLabel16.TabIndex = 16;
-            this.metroLabel16.Text = "SHOW RECIEPT BEFORE CLAIMING";
+            this.txtPayment.Location = new System.Drawing.Point(76, 486);
+            this.txtPayment.MaxLength = 32767;
+            this.txtPayment.Name = "txtPayment";
+            this.txtPayment.PasswordChar = '\0';
+            this.txtPayment.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPayment.SelectedText = "";
+            this.txtPayment.SelectionLength = 0;
+            this.txtPayment.SelectionStart = 0;
+            this.txtPayment.ShortcutsEnabled = true;
+            this.txtPayment.Size = new System.Drawing.Size(147, 24);
+            this.txtPayment.TabIndex = 13;
+            this.txtPayment.Text = "ENTER PAYMENT (eg. 500)";
+            this.txtPayment.UseSelectable = true;
+            this.txtPayment.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPayment.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPayment.Click += new System.EventHandler(this.IsFocused);
+            this.txtPayment.Enter += new System.EventHandler(this.IsFocused);
+            this.txtPayment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterPressed);
             // 
             // gCheckoutTable
             // 
@@ -277,13 +250,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 598);
             this.Controls.Add(this.gCheckoutTable);
-            this.Controls.Add(this.metroLabel16);
-            this.Controls.Add(this.metroLabel15);
-            this.Controls.Add(this.metroLabel14);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtPayment);
             this.Controls.Add(this.metroLabel13);
-            this.Controls.Add(this.metroLabel12);
-            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.lblVat);
+            this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.metroLabel8);
@@ -296,6 +266,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "Checkout";
             this.Text = "Checkout";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Checkout_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gCheckoutTable)).EndInit();
             this.ResumeLayout(false);
@@ -315,13 +286,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel lblTotalPrice;
+        private MetroFramework.Controls.MetroLabel lblVat;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
-        private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroTextBox txtPayment;
         private MetroFramework.Controls.MetroGrid gCheckoutTable;
     }
 }

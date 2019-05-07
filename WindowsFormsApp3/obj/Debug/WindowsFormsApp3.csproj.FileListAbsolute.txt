@@ -62,3 +62,4 @@ C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsA
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.AdminMenu.resources
+C:\Users\Paolo\Source\Repos\POS_Project\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Cart.resources

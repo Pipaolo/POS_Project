@@ -165,6 +165,10 @@ namespace WindowsFormsApp3
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            if(connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
             this.Close();
         }
     }

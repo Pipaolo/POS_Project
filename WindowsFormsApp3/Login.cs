@@ -70,7 +70,6 @@ namespace WindowsFormsApp3
                     Show();
                 }
                 catch (Exception) { }
-
             }
             else
             {
@@ -89,6 +88,9 @@ namespace WindowsFormsApp3
                         {
                             MessageBox.Show("Login Success!");
                             launchMainMenu();
+                            txtUsername.Text = "Username";
+                            txtPassword.UseSystemPasswordChar = false;
+                            txtPassword.Text = "Password";
                             usernameExists = true;
                         }
                     }

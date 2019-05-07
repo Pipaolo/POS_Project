@@ -32,7 +32,6 @@
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.lblRegister = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,15 +124,6 @@
             this.lblRegister.Text = "Register";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(95, 374);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(113, 19);
-            this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "Forgot Password?";
-            // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(131, 424);
@@ -150,7 +140,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 562);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
@@ -169,7 +158,6 @@
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroLabel lblRegister;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton btnLogin;
     }
 }

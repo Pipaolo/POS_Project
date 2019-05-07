@@ -51,8 +51,8 @@
             // 
             // tpMenu
             // 
-            this.tpMenu.Controls.Add(this.breakfastmenu);
             this.tpMenu.Controls.Add(this.regularmenu);
+            this.tpMenu.Controls.Add(this.breakfastmenu);
             this.tpMenu.Controls.Add(this.specialmenu);
             this.tpMenu.Location = new System.Drawing.Point(23, 89);
             this.tpMenu.Name = "tpMenu";
@@ -61,6 +61,7 @@
             this.tpMenu.TabIndex = 1;
             this.tpMenu.UseSelectable = true;
             this.tpMenu.SelectedIndexChanged += new System.EventHandler(this.SelectedTab);
+            this.tpMenu.TabIndexChanged += new System.EventHandler(this.SelectedTab);
             // 
             // breakfastmenu
             // 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MetroFramework.Forms;
 using MetroFramework;
+using Microsoft.VisualBasic;
 using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
@@ -46,6 +47,8 @@ namespace WindowsFormsApp3
         
         int menuSelected;
         string menuType;
+        public bool isReturned = false;
+
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\POS_System.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Menu(int menuSelected, string menuType)
@@ -56,7 +59,8 @@ namespace WindowsFormsApp3
         }
 
         private void Form5_Load(object sender, EventArgs e)
-        {             
+        {
+            tpMenu.SelectedIndex = 0;
             tpMenu.SelectedIndex = menuSelected;
         }
 
@@ -154,7 +158,9 @@ namespace WindowsFormsApp3
                 {               
                     if(label.Tag.ToString() == menuItem.Tag.ToString())
                     {
-                        addItem(1, label.Text, menuItem.Tag.ToString());
+                        int quantity = Convert.ToInt32(
+                                       Interaction.InputBox($"How Many {menuItem.Tag.ToString()}?", "Quantity", "1"));
+                        addItem(quantity, label.Text, menuItem.Tag.ToString());
 
                         MessageBox.Show($"{label.Tag} Added!");
                     }                 
@@ -197,16 +203,20 @@ namespace WindowsFormsApp3
                     ClearData();
                     break;
             }
-
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            Checkout checkout = new Checkout(priceList, foodNameList, quantityList);
+            Cart cart = new Cart(priceList, foodNameList, quantityList);
+
             this.Hide();
-            checkout.ShowDialog();
-            this.Show();
-            
+
+            cart.ShowDialog();
+            priceList = cart.priceList;
+            foodNameList = cart.foodNameList;
+            quantityList = cart.quantityList;
+
+            this.Show();          
         }
 
         private static Bitmap GetImageFromByteArray(byte[] byteArray)
