@@ -90,6 +90,11 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,14 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,77 +158,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\asdasd.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\asdasdasd.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\asdasdadasdasdsa.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\asdasdasdadasdadasd.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\123333.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\11111111.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\12312313.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\12312312313.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\123123111323.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\asd123.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\111111111.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4444444444.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7777777777.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\123123123131.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1231231113231.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\22222222.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1111111111.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\44444444441.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\77777777771.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\333333333333.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\888888888888.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5555555555555.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\66666666666666.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\asd123123.PNG" />
+    <Content Include="Resources\asdasdadasdasdsa.PNG" />
+    <Content Include="Resources\asdasdasd.PNG" />
+    <Content Include="Resources\asdasdasdadasdadasd.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
